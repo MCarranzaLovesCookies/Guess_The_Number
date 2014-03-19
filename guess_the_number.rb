@@ -1,9 +1,11 @@
 puts 'Welcome to "Guess the Number!"'
-secret_number = rand(999)
-puts "Guess a number between 0-999;"
+secret_number = rand(50)
+puts "Guess a number between 0-50;"
 guess=gets.chomp.to_i
-if secret_number = guess
-  puts "Happy Birthday to You! "
-else
-  puts "Your Wrong, the number was #{secret_number} stupid! "
+
+until  guess == secret_number
+  puts "Your Wrong, try again stupid! "
+  guess=gets.chomp.to_i
 end
+
+puts "Happy Birthday!"
